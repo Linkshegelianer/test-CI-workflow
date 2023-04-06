@@ -1,11 +1,11 @@
 name: Run say-hello
 
 on:
-  push:
-    branches: [ main ]
+  - push
 
 jobs:
-  run-say-hello
+  run-say-hello:
+
 runs-on: ubuntu-latest
 steps:
   - name: Checkout code
