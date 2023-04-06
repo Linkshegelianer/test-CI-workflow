@@ -1,14 +1,14 @@
-name: Run say-hello
+name: Say Hello Workflow
 
 on:
-  - push
+  push:
+    branches: [ main ]
 
 jobs:
-  run-say-hello:
-
-runs-on: ubuntu-latest
-steps:
-  - name: Checkout code
-    uses: actions/checkout@v2
-  - name: Run Say Hello
-    run: make say-hello
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Run Say Hello
+        run: make say-hello
